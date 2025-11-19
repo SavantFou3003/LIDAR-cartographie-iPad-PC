@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiDAR Control Center</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="background-glow"></div>
+    <div class="dashboard">
+        <header>
+            <div>
+                <h1>LiDAR Cartographie</h1>
+                <p>Flux temps réel iPad ➜ PC</p>
+            </div>
+            <div class="status-pill" id="ws-status">Déconnecté</div>
+        </header>
+        <main>
+            <section class="visualizer">
+                <div class="hud-panel">
+                    <div class="stat">
+                        <span>FPS</span>
+                        <strong id="stat-fps">0</strong>
+                    </div>
+                    <div class="stat">
+                        <span>Points</span>
+                        <strong id="stat-points">0</strong>
+                    </div>
+                    <div class="stat">
+                        <span>Réception</span>
+                        <strong id="stat-timestamp">--</strong>
+                    </div>
+                </div>
+                <canvas id="three-canvas"></canvas>
+            </section>
+            <aside class="sidebar">
+                <h2>Console</h2>
+                <div class="log-window" id="log-window"></div>
+            </aside>
+        </main>
+    </div>
+</body>
+</html>
